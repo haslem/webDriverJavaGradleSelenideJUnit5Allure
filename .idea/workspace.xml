@@ -20,7 +20,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ovSdfFLlhcPDXW6XqUURyEZB81" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,6 +32,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
   </component>
@@ -39,7 +44,27 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.CountTest">
+    <configuration name="CountTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;notWeb.CountTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CountTest.sumArbitraryNumbers" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -62,6 +87,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CountTest" />
         <item itemvalue="Gradle.CountTest.sumArbitraryNumbers" />
       </list>
     </recent_temporary>
@@ -84,25 +110,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1614166994872" />
-    <state width="1237" height="227" key="GridCell.Tab.0.bottom" timestamp="1614167736185">
+    <state width="1237" height="227" key="GridCell.Tab.0.bottom" timestamp="1614168527857">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="227" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1614167736185" />
-    <state width="1237" height="227" key="GridCell.Tab.0.center" timestamp="1614167736185">
+    <state width="1237" height="227" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1614168527857" />
+    <state width="1237" height="227" key="GridCell.Tab.0.center" timestamp="1614168527857">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="227" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1614167736185" />
-    <state width="1237" height="227" key="GridCell.Tab.0.left" timestamp="1614167736184">
+    <state width="1237" height="227" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1614168527857" />
+    <state width="1237" height="227" key="GridCell.Tab.0.left" timestamp="1614168527857">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="227" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1614167736184" />
-    <state width="1237" height="227" key="GridCell.Tab.0.right" timestamp="1614167736185">
+    <state width="1237" height="227" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1614168527857" />
+    <state width="1237" height="227" key="GridCell.Tab.0.right" timestamp="1614168527857">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="227" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1614167736185" />
-    <state x="412" y="59" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1614167195802">
+    <state width="1237" height="227" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1614168527857" />
+    <state x="659" y="55" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1614168439187">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="412" y="59" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1614167195802" />
+    <state x="659" y="55" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1614168439187" />
   </component>
 </project>

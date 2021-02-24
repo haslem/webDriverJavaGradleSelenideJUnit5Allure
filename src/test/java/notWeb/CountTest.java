@@ -7,11 +7,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CountTest {
 
+    Count testCount = new Count(4, 5);
+
     @Test
     void sumArbitraryNumbers() {
 
-        Count testCount = new Count(4, 5);
-        Assertions.assertEquals(9, testCount.sumBuiltInNumbers());
         Assertions.assertEquals(19, testCount.sumArbitraryNumbers(10, 9));
     }
+
+    @Test
+    void sumBuiltInNumbers() {
+        Assertions.assertEquals(9, testCount.sumBuiltInNumbers());
+    }
+
+
+
+
 }
