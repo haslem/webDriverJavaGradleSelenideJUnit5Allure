@@ -1,11 +1,15 @@
 package base;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.TestInstance;
 import pages.*;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BaseTest {
 
     protected HomePage homePage;
@@ -19,8 +23,9 @@ public class BaseTest {
 
 //    @BeforeClass
     @BeforeEach
+//    @BeforeAll
     public void setUp(){
-
+//        System.out.println("Before each");
 
         //Configuration.browser = "firefox";
 
@@ -40,6 +45,19 @@ public class BaseTest {
         savePage = page(SavePage.class);
         contextMenu = page(ContextMenu.class);
 
-
     }
+
+    @BeforeAll
+    public void login(){
+//        System.out.println("Before all");
+        open("https://mapy.cz/zakladni?x=14.4030680&y=50.0717916&z=16");
+        homePage = page(HomePage.class);
+        myMapsPage = page(MyMapsPage.class);
+
+        homePage.clickLogin();
+        myMapsPage.isLoggedIn();
+        homePage.clickSearch();
+    }
+
+
 }

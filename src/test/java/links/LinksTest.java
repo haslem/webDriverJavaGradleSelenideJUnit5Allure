@@ -3,10 +3,7 @@ package links;
 import base.BaseTest;
 import help.Help;
 import login.LoginTest;
-import org.junit.jupiter.api.Assumptions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pages.HomePage;
 import pages.MyMapsPage;
 
@@ -15,23 +12,25 @@ import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.page;
 
-
+//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class LinksTest extends BaseTest {
 
-//    static HomePage homePage1;
-//    static MyMapsPage myMapsPage1;
+
+//    static HomePage homePage;
+//    static MyMapsPage myMapsPage;
 //    static LoginTest loginTest = new LoginTest();
 
-    @Test
-    public void login(){
-        System.out.println("Before all");
-        homePage.clickLogin();
-        myMapsPage.isLoggedIn();
-    }
 
-    @Nested
-    class allLinks{
+//    @Test
+//    public void login(){
+//        homePage.clickLogin();
+//        myMapsPage.isLoggedIn();
+//    }
+
+//    @Nested
+//    class allLinks{
 
 
 
@@ -605,7 +604,7 @@ public class LinksTest extends BaseTest {
     }
 
 
-    }
+//    }
 
 
 

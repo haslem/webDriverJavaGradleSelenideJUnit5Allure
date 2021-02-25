@@ -124,6 +124,11 @@ public class HomePage {
 
     }
 
+    public void clickSearch(){
+
+        searchTab.click();
+    }
+
     public void check(){
 
         SelenideElement mapa = $(By.id("map"));
