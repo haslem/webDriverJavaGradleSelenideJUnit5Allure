@@ -2,6 +2,7 @@ package links;
 
 import base.BaseTest;
 import help.Help;
+import io.qameta.allure.Step;
 import login.LoginTest;
 import org.junit.jupiter.api.*;
 import pages.HomePage;
@@ -15,6 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 
 //@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@DisplayName("Generate shared links")
 public class LinksTest extends BaseTest {
 
 
@@ -460,7 +462,9 @@ public class LinksTest extends BaseTest {
 
 //    @Test(dependsOnMethods={"login"})
     @Test
+    @DisplayName("Share historic map")
     public void historicMap() throws IOException, UnsupportedFlavorException {
+
 
         homePage.maxZoom();
         homePage.setHistoricMap();
@@ -518,90 +522,88 @@ public class LinksTest extends BaseTest {
     }
 
 
-//    @Test(dependsOnMethods={"login"})
-    @Test
-    public void elementsToFolder() throws IOException, UnsupportedFlavorException {
-
-        homePage.myMaps();
-
-        myMapsPage.createFolder("New");
-        notification.closeNotification();
-
-        //measure to folder
-        homePage.openTools().clickMeasure();
-        poiDetailPage.addMeasure();
-
-        poiDetailPage.save();
-        savePage.setFolderToSave("New");
-        savePage.save();
-        poiDetailPage.closeMeasure();
-
-
-        //marks to folder
-        homePage.openTools().clickMarks();
-        poiDetailPage.addMarks();
-
-        poiDetailPage.save();
-        savePage.setFolderToSave("New");
-        savePage.save();
-
-
-        //poi to folder
-        open("https://mapy.cz/zakladni?x=14.4030680&y=50.0717916&z=16");
-        homePage.poiHover();
-
-        poiDetailPage.save();
-        Help.timeOut(1);
-        savePage.setFolderToSave("New");
-        savePage.save();
-
-
-        Help.timeOut(1);
-
-
-        //coor to folder
-        homePage.rightClickAtCenter();
-        contextMenu.whatIsHereClick();
-
-        poiDetailPage.save();
-        savePage.setFolderToSave("New");
-        savePage.save();
-
-
-
-        //route to folder
-        open("https://mapy.cz/zakladni?x=14.4030680&y=50.0717916&z=16");
-        homePage.planning();
-        planningPage.setStart("Prague");
-        planningPage.setEnd("Ostrava");
-
-        poiDetailPage.save();
-        savePage.setFolderToSave("New");
-        savePage.save();
-
-
-        //trip to folder
-        open("https://mapy.cz/zakladni?x=14.4030680&y=50.0717916&z=16");
-        homePage.rightClickAtCenter();
-        contextMenu.trip();
-
-        poiDetailPage.save();
-        savePage.setFolderToSave("New");
-        savePage.save();
-
-
-        //share
-        open("https://mapy.cz/zakladni?x=14.4030680&y=50.0717916&z=16");
-        homePage.myMaps().shareFolder();
-        //Help.timeOut(1);
-        toolsPage.shareOn();
-        toolsPage.copyLink();
-        //Help.timeOut(1);
-        toolsPage.close();
-        Help.linkToFile("folder link");
-
-
-    }
+//    @Test
+//    @DisplayName("Add elements to folder and share folder")
+//    public void elementsToFolder() throws IOException, UnsupportedFlavorException {
+//
+//        homePage.myMaps();
+//
+//        myMapsPage.createFolder("New");
+//        notification.closeNotification();
+//
+//        //measure to folder
+//        homePage.openTools().clickMeasure();
+//        poiDetailPage.addMeasure();
+//
+//        poiDetailPage.save();
+//        savePage.setFolderToSave("New");
+//        savePage.save();
+//        poiDetailPage.closeMeasure();
+//
+//
+//        //marks to folder
+//        homePage.openTools().clickMarks();
+//        poiDetailPage.addMarks();
+//
+//        poiDetailPage.save();
+//        savePage.setFolderToSave("New");
+//        savePage.save();
+//
+//
+//        //poi to folder
+//        open("https://mapy.cz/zakladni?x=14.4030680&y=50.0717916&z=16");
+//        homePage.poiHover();
+//
+//        poiDetailPage.save();
+//        Help.timeOut(1);
+//        savePage.setFolderToSave("New");
+//        savePage.save();
+//
+//
+//        Help.timeOut(1);
+//
+//
+//        //coor to folder
+//        homePage.rightClickAtCenter();
+//        contextMenu.whatIsHereClick();
+//
+//        poiDetailPage.save();
+//        savePage.setFolderToSave("New");
+//        savePage.save();
+//
+//
+//
+//        //route to folder
+//        open("https://mapy.cz/zakladni?x=14.4030680&y=50.0717916&z=16");
+//        homePage.planning();
+//        planningPage.setStart("Prague");
+//        planningPage.setEnd("Ostrava");
+//
+//        poiDetailPage.save();
+//        savePage.setFolderToSave("New");
+//        savePage.save();
+//
+//
+//        //trip to folder
+//        open("https://mapy.cz/zakladni?x=14.4030680&y=50.0717916&z=16");
+//        homePage.rightClickAtCenter();
+//        contextMenu.trip();
+//
+//        poiDetailPage.save();
+//        savePage.setFolderToSave("New");
+//        savePage.save();
+//
+//
+//        //share
+//        open("https://mapy.cz/zakladni?x=14.4030680&y=50.0717916&z=16");
+//        homePage.myMaps().shareFolder();
+//        //Help.timeOut(1);
+//        toolsPage.shareOn();
+//        toolsPage.copyLink();
+//        //Help.timeOut(1);
+//        toolsPage.close();
+//        Help.linkToFile("folder link");
+//    }
 
 
 //    }

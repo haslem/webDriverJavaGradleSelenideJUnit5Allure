@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import help.Help;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
@@ -67,6 +68,7 @@ public class HomePage {
         SelenideElement map = $(By.id("map"));
         actions().moveToElement(map).perform();
     }
+
 
     public ToolsPage openTools(){
         try {
@@ -169,6 +171,7 @@ public class HomePage {
         return page(PlanningPage.class);
     }
 
+    @Step("Open My Maps")
     public MyMapsPage myMaps(){
         myMapsTab.click();
         Help.timeOut(1);
